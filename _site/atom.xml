@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Jhaura Wachsman</title>
+ <title>Jhaura Wachsman - Web Developer</title>
  <link href="http://jhaurawachsman.com/atom.xml" rel="self"/>
  <link href="http://jhaurawachsman.com/"/>
- <updated>2013-04-02T22:21:26-07:00</updated>
+ <updated>2013-04-02T22:46:54-07:00</updated>
  <id>http://jhaurawachsman.com/</id>
  <author>
    <name>Jhaura Wachsman</name>
    <email>jw@jhaurawachsman.com</email>
  </author>
-
  
  <entry>
    <title>Placeholder post</title>
@@ -21,5 +20,4 @@
 </content>
  </entry>
  
-
 </feed>
