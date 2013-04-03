@@ -8,3 +8,6 @@ Thumbs.db
 Icon?
 .cache
 *.sublime-*
+
+# Jekyll Static
+_site
