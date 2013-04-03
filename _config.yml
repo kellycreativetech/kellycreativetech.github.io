@@ -1,17 +1,37 @@
 safe: true
-auto: true
-server: true
+# auto: true
+# server: true
 
 markdown: redcarpet
 
+root: /
 permalink: /:title/
 
-include: ['.htaccess']
+include: ['.htaccess', '_pages']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules']
 
-# Site global text strings
-lang:
+# Site CONSTANTS ===================================================== #
+constants:
+
+  # Name (Brand) and Tagline
   name: 'Jhaura Wachsman'
-  tagline: 'Web Developer'
-  email: 'jw@jhaurawachsman.com'
-  domain: 'jhaurawachsman.com'
+  tagline:   'Web Developer'
+
+  # Contact and Domain
+  email:     'jw@jhaurawachsman.com'
+  domain:    'jhaurawachsman.com'
+
+  # Social Media User Names (Not full URL)
+  github:    'jhauraw'
+  twitter:   'JhauraWachsman'
+  facebook:  'JhauraWachsman'
+  gplus:     '103492502746159725544'
+  pinterest: 'jhaurawachsman'
+  linkedin:  'jhaurawachsman'
+
+  # Meta Admin / Verify IDs
+  facebook-admin: '1550453047'
+  facebook-appid: '251689391563684'
+
+  # Analytics / Metrics
+  google-analytics-id: 'UA-17276272-1'

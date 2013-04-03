@@ -1,11 +1,143 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-    </head>
-    <body>
-{{ content }}
-    </body>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en-US"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en-US"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+
+  <title>{{ page.title }}{% if page.title %} - {% endif %}{{ site.constants.name }}</title>
+
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/img/h/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/img/m/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/img/l/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.url }}/img/l/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ site.url }}/img/favicon.ico">
+
+</head>
+<body>
+
+  <nav id="panelnav">
+    <ul class="panelmenu">
+      <li class="logo">
+        <a class="brand" href="/">
+          <span>Brand</span>
+          <img src="{{ site.url }}/img/logo.png" alt="" />
+        </a>
+      </li>
+      <li><a href="/placeholder-post/">Nav Item 1</a></li>
+      <li><a href="#">Nav Item 2</a></li>
+      <li><a href="#">Nav Item 3</a></li>
+      <li><a href="#">Nav Item 4</a></li>
+      <li><a href="#">Nav Item 5</a></li>
+      <li><a href="#">Nav Item 6</a></li>
+      <li><a href="#">Nav Item 7</a></li>
+      <li><a href="#">Nav Item 8</a></li>
+      <li><a href="#">Nav Item 9</a></li>
+    </ul>
+  </nav><!-- #panelnav -->
+
+  <div id="peek">
+    <div id="sticky">
+      <div class="navwrap">
+
+        <nav id="navbar">
+
+          <!-- Title / Menu Section -->
+          <ul class="title-area">
+            <li class="toggle-menu menu-icon"><a href="#"></a></li>
+
+            <li class="logo">
+              <a class="brand" href="/">
+                <span>Brand</span>
+                <img src="{{ site.url }}/img/logo.png" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <section class="navsection">
+            <ul class="left navmenu">
+              <li class="submenu">
+                <a href="#">Item 1</a>
+
+                <div class="submenu-content">
+                  <div class="page-container">
+                    <ul class="left">
+                    <li>Item 1 Sub Item 1</li>
+                    <li>Item 1 Sub Item 2</li>
+                    <li>Item 1 Sub Item 3</li>
+                    </ul>
+
+                    <ul class="right">
+                    <li>Item 1 Sub Item 4</li>
+                    <li>Item 1 Sub Item 5</li>
+                    <li>Item 1 Sub Item 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="submenu">
+                <a href="#">Item 2</a>
+
+                <div class="submenu-content">
+                  <div class="page-container">
+                    <ul class="left">
+                      <li>Item 2 Sub Item 1</li>
+                      <li>Item 2 Sub Item 2</li>
+                      <li>Item 2 Sub Item 3</li>
+                    </ul>
+
+                    <ul class="right">
+                      <li>Item 2 Sub Item 4</li>
+                      <li>Item 2 Sub Item 5</li>
+                      <li>Item 2 Sub Item 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="right usermenu">
+              <li><a href="/search/">S</a></li>
+              <li><a href="#">F</a></li>
+              <li><a href="#">T</a></li>
+            </ul>
+          </section><!-- .navsection -->
+
+        </nav><!-- #navbar -->
+
+      </div> <!-- .navwrap -->
+    </div><!-- #sticky -->
+
+    <div id="scrollable">
+      <div id="container" class="row">
+        <div id="main">
+          {{ content }}
+        </div><!-- #main -->
+      </div><!-- #container.row -->
+
+      <footer id="footer-wrapper" role="contentinfo">
+        <div id="footer" class="row">
+          <div class="large-5 columns">
+
+            <p>&copy; {{ site.constants.name }}. {{ site.constants.tagline }}.</p>
+
+          </div><!-- .columns -->
+          <div class="large-7 columns">
+            <ul class="inline-list right">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div><!-- .columns -->
+        </div><!-- #footer-inner.row -->
+      </footer><!-- footer -->
+
+    </div><!-- #scrollable -->
+  </div><!-- #peek -->
+
+  <div id="fb-root"></div>
+
+</body>
 </html>
