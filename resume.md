@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Résumé
+permalink: resume/
 ---
 
 # Jhaura Wachsman
