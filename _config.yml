@@ -7,3 +7,9 @@ markdown: redcarpet
 permalink: /:title/
 
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules'] # files to exclude
+
+gname: 'Jhaura Wachsman'
+gtitle: 'Jhaura Wachsman'
+gemail: 'jw@jhaurawachsman.com'
+gtag: 'Web Developer'
+gdomain: 'jhaurawachsman.com'
