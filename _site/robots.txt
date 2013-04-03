@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /css
-Disallow: /js
-
-Sitemap: http://jhaurawachsman.com/sitemap.xml.gz
