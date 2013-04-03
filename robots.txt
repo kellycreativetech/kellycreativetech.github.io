@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /phperr.log
+Disallow: /downloads
+Disallow: /webinar
+Disallow: /cgi-bin
+
+Sitemap: http://jhaurawachsman.com/sitemap.xml.gz

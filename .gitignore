@@ -1,0 +1,13 @@
+tmp
+node_modules
+*.sass-cache
+
+# OS, Editors
+*.DS_Store
+Thumbs.db
+Icon?
+.cache
+*.sublime-*
+
+# Static site output
+_site

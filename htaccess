@@ -1,0 +1,24 @@
+---
+layout: none
+permalink: .htaccess
+---
+
+Options -Indexes
+IndexIgnore *
+
+SetEnv PHPRC /Users/user/sites/static
+
+ErrorDocument 404 /404/
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# remove www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,QSA,L]
+
+# index.php to /
+# RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.php\ HTTP/
+# RewriteRule ^(.*)index\.php$ /$1 [R=301,QSA,L]
+</IfModule>
