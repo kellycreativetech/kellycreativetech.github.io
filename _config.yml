@@ -6,7 +6,8 @@ markdown: redcarpet
 
 permalink: /:title/
 
-exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules'] # files to exclude
+include: ['.htaccess']
+exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules']
 
 # Site global text strings
 lang:
