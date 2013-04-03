@@ -8,6 +8,3 @@ Thumbs.db
 Icon?
 .cache
 *.sublime-*
-
-# Static site output
-_site
