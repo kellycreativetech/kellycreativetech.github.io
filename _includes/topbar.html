@@ -1,0 +1,100 @@
+ ---
+ items:
+- text: What we do
+  url: /en/what-we-do/
+- text: Who we are
+  url: /en/who-we-are/
+- text: Projects
+  url: /en/projects/
+- text: Blog
+  url: /en/blog/
+---
+
+<ul class="navigation">
+  {% for link in site.navigation %}
+    {% assign current = nil %}
+    {% if page.url == link.url or page.layout == link.layout %}
+      {% assign current = 'current' %}
+    {% endif %}
+
+    <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+      <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% for post in site.categories.photo %}
+    # render the photo post html
+{% endfor %}
+
+   <div id="sticky">
+      <div class="navwrap">
+
+        <nav id="navbar">
+
+          <!-- Title / Menu Section -->
+          <ul class="title-area">
+            <li class="toggle-menu menu-icon"><a href="#"></a></li>
+
+            <li class="logo">
+              <a class="brand" href="/">
+                <span>{{ site.contstants.name }}</span>
+                <img src="{{ site.url }}/img/logo.png" alt="{{ site.contstants.name }}" />
+              </a>
+            </li>
+          </ul>
+
+          <section class="navsection">
+            <ul class="left navmenu">
+              <li class="submenu">
+                <a href="#">Item 1</a>
+
+                <div class="submenu-content">
+                  <div class="page-container">
+                    <ul class="left">
+                    <li>Item 1 Sub Item 1</li>
+                    <li>Item 1 Sub Item 2</li>
+                    <li>Item 1 Sub Item 3</li>
+                    </ul>
+
+                    <ul class="right">
+                    <li>Item 1 Sub Item 4</li>
+                    <li>Item 1 Sub Item 5</li>
+                    <li>Item 1 Sub Item 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="submenu">
+                <a href="#">Item 2</a>
+
+                <div class="submenu-content">
+                  <div class="page-container">
+                    <ul class="left">
+                      <li>Item 2 Sub Item 1</li>
+                      <li>Item 2 Sub Item 2</li>
+                      <li>Item 2 Sub Item 3</li>
+                    </ul>
+
+                    <ul class="right">
+                      <li>Item 2 Sub Item 4</li>
+                      <li>Item 2 Sub Item 5</li>
+                      <li>Item 2 Sub Item 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="right usermenu">
+              <li><a href="/search/">S</a></li>
+              <li><a href="#">F</a></li>
+              <li><a href="#">T</a></li>
+            </ul>
+          </section><!-- .navsection -->
+
+        </nav><!-- #navbar -->
+
+      </div> <!-- .navwrap -->
+    </div><!-- #sticky -->

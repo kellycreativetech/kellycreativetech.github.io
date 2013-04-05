@@ -1,5 +1,5 @@
 <meta name="robots" content="noodp,noydir" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.constants.tagline }}{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.constants.name }} - {{ site.constants.tagline }}{% endif %}" />
   <meta property="og:site_name" content="{{ site.constants.name }}" />
   <meta property="og:url" content="{{ site.url }}{% if page.url %}{{ page.url | remove: 'index.html' }}{% endif %}" />
   <link rel="image_src" href="{% if page.img.url %}{{ page.img.url }}{% else %}{{ site.url }}/img/meta.png{% endif %}" />
