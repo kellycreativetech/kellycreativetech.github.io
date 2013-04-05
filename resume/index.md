@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Résumé
-permalink: resume/
+excerpt: |
+  Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 ---
 
 # Jhaura Wachsman

@@ -1,37 +1,52 @@
-safe: true
-# auto: true
-# server: true
-
-markdown: redcarpet
-
-root: /
-permalink: /:title/
-
-include: ['.htaccess', '_pages']
-exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules']
-
 # Site CONSTANTS ===================================================== #
 constants:
 
-  # Name (Brand) and Tagline
-  name: 'Jhaura Wachsman'
-  tagline:   'Web Developer'
+  # Locale and encoding
+  lang:      en-US
+  locale:    en_US
+  encoding:  utf-8
+
+  # Put blog in own directory? Leave both blank if no.
+  blog_dir:  blog
+  blog_url:
+
+  # Name (Brand), Tagline and Meta Image (Og)
+  name:      Jhaura Wachsman
+  tagline:   Web Developer
+  description: |
+    Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 
   # Contact and Domain
-  email:     'jw@jhaurawachsman.com'
-  domain:    'jhaurawachsman.com'
+  email:     jw@jhaurawachsman.com
+  domain:    jhaurawachsman.com
 
   # Social Media User Names (Not full URL)
-  github:    'jhauraw'
-  twitter:   'JhauraWachsman'
-  facebook:  'JhauraWachsman'
-  gplus:     '103492502746159725544'
-  pinterest: 'jhaurawachsman'
-  linkedin:  'jhaurawachsman'
+  github:    jhauraw
+  twitter:   JhauraWachsman
+  facebook:  JhauraWachsman
+  gplus:     103492502746159725544
+  pinterest: jhaurawachsman
+  linkedin:  jhaurawachsman
+
+  # Feedburner Feed Name
+  feed-name: jhaurawachsman
 
   # Meta Admin / Verify IDs
-  facebook-admin: '1550453047'
-  facebook-appid: '251689391563684'
+  facebook-admin:      1550453047
+  facebook-appid:      251689391563684
+  gplus-publisher:     103492502746159725544
+  disqus-user:
 
   # Analytics / Metrics
-  google-analytics-id: 'UA-17276272-1'
+  google-analytics-id: UA-17276272-1
+
+# Jekyll Config ====================================================== #
+url: http://jhaurawachsman.com
+
+# lsi: true
+markdown: redcarpet
+paginate: 10
+permalink: /blog/:title/
+
+include: ['.htaccess', '_pages']
+exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules']

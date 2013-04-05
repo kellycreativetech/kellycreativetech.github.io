@@ -1,17 +1,17 @@
 {
-  "name": "wpfndtn",
+  "name": "zfjk",
   "version": "0.9.0",
-  "description": "Zurb Foundation Theme for Wordpress",
+  "description": "Zurb Foundation Theme for Jekyll",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhauraw/wpfndtn.git"
+    "url": "https://github.com/jhauraw/foundation-jekyll.git"
   },
   "keywords": [
-    "wordpress",
+    "jekyll",
     "zurb",
     "foundation",
     "theme",
@@ -21,7 +21,7 @@
   "author": "Jhaura Wachsman",
   "license": "GPL",
   "readmeFilename": "README.md",
-  "gitHead": "08e7b729b8fb19b7459e233daf6edc3221a42b8f",
+  "gitHead": "",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-regarde": "~0.1.1",

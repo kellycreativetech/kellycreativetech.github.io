@@ -1,9 +1,11 @@
 ---
-layout: default
-type: home
+layout: page
+title: Blog
+excerpt: |
+  Information, tutorials, howtos and great content on topics related to modern day responsive mobile-first web development and design with a focus on workflow optimization.
 ---
 
-<h1>{{ page.title }} - HOME</h1>
+<h1>{{ page.title }}</h1>
 
 {% if paginator.posts %}
   <ul>
@@ -14,7 +16,7 @@ type: home
           <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
         </p>
         {% if post.excerpt %}
-          <p class="excerpt">{{ post.excerpt | read_more: post.url | simple_format }}</p>
+          <p class="excerpt">{{ post.excerpt }}</p>
         {% endif %}
       </li>
     {% endfor %}
