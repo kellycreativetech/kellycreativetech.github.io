@@ -1,5 +1,7 @@
+---
+layout: nil
+---
 User-agent: *
-Disallow: /css
-Disallow: /js
+Disallow:
 
-Sitemap: http://jhaurawachsman.com/sitemap.xml.gz
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml.gz

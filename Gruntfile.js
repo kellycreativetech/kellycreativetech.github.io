@@ -28,8 +28,16 @@ module.exports = function(grunt) {
     cssmin: {
       compress: {
         files: {
-          'css/app.min.css': ['css/site.css']
+          'css/app.css': ['css/app.css'],
+          'css/site.css': ['css/site.css']
         }
+      }
+    },
+    copy: {
+      main: {
+        files: [
+          {src: ['_assets/js/vendor/modernizr.js'], dest: 'js/modernizr.js', filter: 'isFile'}
+        ]
       }
     },
     concat: {
@@ -37,13 +45,32 @@ module.exports = function(grunt) {
         banner: '<%= banner %>',
         stripBanners: true
       },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+      founation: {
+        src: [
+          '_assets/js/foundation/foundation.js',
+          '_assets/js/foundation/foundation.alerts.js',
+          '_assets/js/foundation/foundation.clearing.js',
+          '_assets/js/foundation/foundation.cookie.js',
+          '_assets/js/foundation/foundation.dropdown.js',
+          '_assets/js/foundation/foundation.forms.js',
+          '_assets/js/foundation/foundation.joyride.js',
+          '_assets/js/foundation/foundation.magellan.js',
+          '_assets/js/foundation/foundation.orbit.js',
+          '_assets/js/foundation/foundation.placeholder.js',
+          '_assets/js/foundation/foundation.reveal.js',
+          '_assets/js/foundation/foundation.section.js',
+          '_assets/js/foundation/foundation.tooltips.js',
+          '_assets/js/foundation/foundation.topbar.js',
+        ],
+        dest: 'js/foundation.js'
+      },
+      app: {
+        src: ['_assets/js/app/app.js'], // , '_assets/js/vendor/github.js'
+        dest: 'js/app.js'
       }
     },
     'jshint': {
-      all: ['js/*.js', '!js/modernizr.js', '!js/foundation.js', '!js/jquery.js', '!js/zepto.js', '!js/vendor/**/*.js'],
+      all: ['_assets/js/app/*.js', '!_assets/js/vendor/**/*.js', '!_assets/js/vendor/**/*.js'],
       options: {
         browser: true,
         curly: false,
@@ -62,26 +89,76 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %>'
       },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/app.min.js'
+      foundation: {
+        src: 'js/foundation.js',
+        dest: 'js/foundation.js'
+      },
+      app: {
+        src: 'js/app.js',
+        dest: 'js/app.js'
+      },
+      zepto: {
+        src: '_assets/js/vendor/zepto.js',
+        dest: 'js/zepto.js'
+      },
+      jquery: {
+        src: '_assets/js/vendor/jquery.js',
+        dest: 'js/jquery.js'
       }
     },
-    regarde: {
+    shell: {
+      jekyll_basic: {
+        command: 'jekyll',
+        options: {
+          stdout: true
+        }
+      },
+      jekyll_server: {
+        command: 'jekyll --server',
+        options: {
+          stdout: true
+        }
+      },
+      jekyll_stop: {
+        command: '',
+        options: {
+          stdout: false
+        }
+      }
+    },
+    watch: {
       js: {
         files: '_assets/js/**/*.js',
-        tasks: ['jshint', 'livereload'],
-        //spawn: true
+        tasks: ['jshint', 'concat', 'copy', 'shell:jekyll_server'],
+        options: {
+          nospawn: true,
+          interrupt: true
+        }
       },
       css: {
         files: '_assets/sass/**/*.scss',
-        tasks: ['compass:dist', 'livereload'],
-        events: true
+        tasks: ['compass', 'shell:jekyll_server'],
+        options: {
+          nospawn: true,
+          interrupt: true
+        }
       },
-      php: {
-        files : '**/*.php',
-        tasks : 'livereload'
-      }
+      ext: {
+        files: ['!_site/**/*', '!node_modules/**/*', '!_assets/**/*', '**/*.md', '**/*.html', '**/*.yml', '**/*.txt', '**/*.xml'],
+        tasks: ['shell:jekyll_server'],
+        options: {
+          nospawn: true,
+          interrupt: true
+        }
+      },
+      site: {
+        files: '_site/index.html',
+        tasks: [], // 'livereload'
+        options: {
+          nospawn: true,
+          interrupt: true
+        }
+      },
     },
 
     gruntfile: {
@@ -89,12 +166,14 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['livereload-start', 'regarde']);
+  grunt.registerTask('default', ['watch']); // 'livereload-start'
   grunt.registerTask('dist', ['compass', 'cssmin', 'jshint', 'uglify', 'concat']);
 
-  grunt.loadNpmTasks('grunt-regarde');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-livereload');
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.loadNpmTasks('grunt-contrib-compass');

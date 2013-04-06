@@ -1,4 +1,4 @@
- ---
+---
  items:
 - text: What we do
   url: /en/what-we-do/
@@ -10,23 +10,6 @@
   url: /en/blog/
 ---
 
-<ul class="navigation">
-  {% for link in site.navigation %}
-    {% assign current = nil %}
-    {% if page.url == link.url or page.layout == link.layout %}
-      {% assign current = 'current' %}
-    {% endif %}
-
-    <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-      <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-{% for post in site.categories.photo %}
-    # render the photo post html
-{% endfor %}
-
    <div id="sticky">
       <div class="navwrap">
 
@@ -37,9 +20,9 @@
             <li class="toggle-menu menu-icon"><a href="#"></a></li>
 
             <li class="logo">
-              <a class="brand" href="/">
+              <a class="brand" href="{% if site.baseurl %}{{ site.baseurl }}{% else %}/{% endif %}">
                 <span>{{ site.contstants.name }}</span>
-                <img src="{{ site.url }}/img/logo.png" alt="{{ site.contstants.name }}" />
+                <img src="{{ site.baseurl }}/img/logo.png" alt="{{ site.contstants.name }}" />
               </a>
             </li>
           </ul>

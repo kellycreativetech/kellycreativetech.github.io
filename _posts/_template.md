@@ -1,7 +1,7 @@
 ---
 author:
 excerpt: |
-
+  Your_Excerpt_Here
 image:
   url:
   title:

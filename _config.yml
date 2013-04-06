@@ -40,27 +40,11 @@ constants:
   # Analytics / Metrics
   google-analytics-id: UA-17276272-1
 
-panelnav:
-- text: What we do
-  url: /en/what-we-do/
-- text: Who we are
-  url: /en/who-we-are/
-- text: Projects
-  url: /en/projects/
-- text: Blog
-  url: /en/blog/
-
-footernav:
-- text: What we do
-  url: /en/what-we-do/
-- text: Who we are
-  url: /en/who-we-are/
-- text: Projects
-  url: /en/projects/
-- text: Blog
-  url: /en/blog/
-
 # Jekyll Config ====================================================== #
+auto: false
+server: false
+
+baseurl:
 url: http://jhaurawachsman.com
 
 # lsi: true

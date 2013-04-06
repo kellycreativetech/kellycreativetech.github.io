@@ -1,13 +1,15 @@
+---
+layout: nil
+---
 Options -Indexes
 IndexIgnore *
 
-SetEnv PHPRC /Users/user/sites/static
-
-ErrorDocument 404 /404/
+ErrorDocument 404 {{ site.baseurl }}/404/
+ErrorDocument 500 {{ site.baseurl }}/500/
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
+RewriteBase {{ site.baseurl }}/
 
 # remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

@@ -7,7 +7,7 @@
 
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.constants.name }}{% if page.type == 'home' %} - {{ site.constants.tagline }}{% endif %}</title>
 
-  <link type="text/plain" rel="author" href="{{ site.url }}/humans.txt" />
+  <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.constants.name }}" href="//feeds.feedburner.com/{{ site.constants.feed-name }}" />
 
@@ -15,11 +15,16 @@
   <meta property="fb:admins" content="{{ site.constants.facebook-admin }}" />
   <link rel="publisher" href="https://plus.google.com/{{ site.constants.gplus-publisher }}" />
 
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/img/h/apple-touch-icon.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/img/m/apple-touch-icon.png">
-  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/img/l/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.url }}/img/l/apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.url }}/img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/img/h/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/img/m/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/l/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/l/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css" />
+
+  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
 
   {% include og.html %}
 
@@ -30,7 +35,7 @@
 
   <div id="peek">
 
-    {% include topbar %}
+    {% include topbar.html %}
 
     <div id="scrollable">
       <div id="container" class="row">
@@ -48,5 +53,13 @@
 
   <div id="fb-root"></div>
   {% include analytics.html %}
+
+  <script>
+  document.write('<script src={{ site.baseurl }}/js/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="{{ site.baseurl }}/js/foundation.js"></script>
+  <script src="{{ site.baseurl }}/js/app.js"></script>
 </body>
 </html>

@@ -101,7 +101,7 @@
 
         if (peek.hasClass('expose')) {
 
-          /* Required! Otherwise, nasty horizontal scroll bar. */
+          /* Required. Otherwise, nasty horizontal scroll bar. */
           //$('html').css('overflow-x', 'hidden');
           //$('body').css('overflow-x', 'hidden');
 

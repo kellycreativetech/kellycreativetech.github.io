@@ -10,8 +10,6 @@ excerpt: |
 
 Jhaura is a senior level web developer with management skills which allows him to interface directly with clients and communicate effectively. His reputation for accuracy, timeliness and honesty make Jhaura an asset to the project.
 
-**Profiles**: [LinkedIn](http://linkedin.com/in/jhaurawachsman), [Facebook](http://facebook.com/JhauraWachsman).
-
 **Recent Sites** (most completed 100% from start to finish; graphics and
 coding):
 
