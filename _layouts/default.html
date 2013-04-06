@@ -15,11 +15,11 @@
   <meta property="fb:admins" content="{{ site.constants.facebook-admin }}" />
   <link rel="publisher" href="https://plus.google.com/{{ site.constants.gplus-publisher }}" />
 
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/img/h/apple-touch-icon.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/img/m/apple-touch-icon.png">
-  <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/l/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/l/apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/img/apple-touch-icon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/img/apple-touch-icon-72.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
 
   <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css" />
   <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css" />
@@ -54,11 +54,7 @@
   <div id="fb-root"></div>
   {% include analytics.html %}
 
-  <script>
-  document.write('<script src={{ site.baseurl }}/js/' +
-  ('__proto__' in {} ? 'zepto' : 'jquery') +
-  '.js><\/script>')
-  </script>
+  <script>document.write('<script src={{ site.baseurl }}/js/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>')</script>
   <script src="{{ site.baseurl }}/js/foundation.js"></script>
   <script src="{{ site.baseurl }}/js/app.js"></script>
 </body>

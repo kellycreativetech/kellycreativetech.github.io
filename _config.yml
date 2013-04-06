@@ -1,4 +1,5 @@
 # Site CONSTANTS ===================================================== #
+
 constants:
 
   # Locale and encoding
@@ -37,16 +38,40 @@ constants:
   google-analytics-id: UA-17276272-1
 
 # Jekyll Config ====================================================== #
+
 auto: false
 server: false
 
+# To run the site from a sub-dir, e.g., /site
+# Yes leading-slash. No trailing-slash
 baseurl:
-url: http://jw.localhost
+
+# Used any place a where an absolute URL is required
+# REQUIRED if you want OG:TYPE meta tags to work and for the
+# XML feed
+#
+# If using jekyll --server locally, use: http://localhost:PORT
+# Default PORT is 4000
+#
+# If using MAMP/XAMP locally, use your local host name such as
+# sitename.localhost
+#
+# For production, set to the HTTP server domain.
+# Be sure to use http://
+url: http://localhost:4000
+
+# You can use a directory name here to have just the Blog posts
+# served from an sub-directory, e.g., /blog
+#
+# In that case, your permalink value would be: /blog/:title/
+#
+# NOTE: This is different from the baseurl variable above; it
+# only affects the _posts directory.
+permalink: /blog/:title/
 
 # lsi: true
 markdown: redcarpet
 paginate: 10
-permalink: /blog/:title/
 
 include: ['.htaccess', '_pages']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules']
