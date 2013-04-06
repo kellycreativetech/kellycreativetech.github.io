@@ -114,7 +114,7 @@ html #peek, body #peek {
 }
 #navbar ul.title-area li.menu-icon a {
   padding: 12px;
-  background-image: url(../../img/menu-icon.svg);
+  background-image: url(/img/menu-icon.svg);
 }
 #navbar .navsection {
   left: 0;
@@ -280,7 +280,7 @@ html #peek, body #peek {
   display: none;
 }
 #navbar .title-area > li.logo a.brand img, #panelnav .panelmenu > li.logo a.brand img {
-  width: 130px;
+  width: 50px;
   padding: 10px 0 9px;
   vertical-align: middle;
 }
@@ -429,7 +429,7 @@ ul.orbit-bullets {
   margin-bottom: 0;
 }
 #footer p, #footer li {
-  font-size: 0.6875em;
+  font-size: 0.75em;
 }
 
 @media only screen and (min-width: 48em) {

@@ -1,5 +1,7 @@
 ---
 author:
+  name:
+  domain:
 excerpt: |
   Your_Excerpt_Here
 image:

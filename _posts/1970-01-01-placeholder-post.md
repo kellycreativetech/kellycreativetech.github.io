@@ -1,5 +1,7 @@
 ---
-author: Jhaura Wachsman
+author:
+  name: Foo Bar
+  domain: foobar.com
 excerpt: |
   A placeholder post...
 image:

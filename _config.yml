@@ -37,6 +37,10 @@ constants:
   # Analytics / Metrics
   google-analytics-id: UA-17276272-1
 
+  author:
+    name: Jhaura Wachsman
+    domain: jhaurawachsman.com
+
 # Jekyll Config ====================================================== #
 
 auto: false

@@ -127,7 +127,7 @@ html #peek, body #peek {
       background-color: #2693ba;
       a {
         padding: 12px;
-        background-image: url(../../img/menu-icon.svg);
+        background-image: url(/img/menu-icon.svg);
       }
     } // .menu-icon
   } // .title-area
@@ -312,7 +312,7 @@ html #peek, body #peek {
         display: none;
       }
       img {
-        width: 130px;
+        width: 50px;
         padding: 10px 0 9px;
         vertical-align: middle;
       }
@@ -361,7 +361,7 @@ html #peek, body #peek {
       //padding: emCalc(30px) emCalc(15px);
     }
     .row .columns.large-centered {
-      //min-width: emCalc(555px);
+      //min-width: emCalc(555px); ?
       //max-width: emCalc(655px);
     }
   }
@@ -492,7 +492,7 @@ ul.orbit-bullets {
     margin-bottom: 0;
   }
   p, li {
-    font-size: emCalc(11px);
+    font-size: emCalc(12px);
   }
 }
 

@@ -1,16 +1,4 @@
----
- items:
-- text: What we do
-  url: /en/what-we-do/
-- text: Who we are
-  url: /en/who-we-are/
-- text: Projects
-  url: /en/projects/
-- text: Blog
-  url: /en/blog/
----
-
-   <div id="sticky">
+  <div id="sticky">
       <div class="navwrap">
 
         <nav id="navbar">
@@ -21,8 +9,8 @@
 
             <li class="logo">
               <a class="brand" href="{% if site.baseurl %}{{ site.baseurl }}{% else %}/{% endif %}">
-                <span>{{ site.contstants.name }}</span>
-                <img src="{{ site.baseurl }}/img/logo.png" alt="{{ site.contstants.name }}" />
+                <span>{{ site.constants.name }}</span>
+                <img src="{{ site.baseurl }}/img/brand.png" alt="{{ site.constants.name }}" />
               </a>
             </li>
           </ul>
@@ -35,7 +23,7 @@
                 <div class="submenu-content">
                   <div class="page-container">
                     <ul class="left">
-                    <li>Item 1 Sub Item 1</li>
+                    <li><a href="{{ site.baseurl }}/blog/">Item 1 Sub Item 1</a></li>
                     <li>Item 1 Sub Item 2</li>
                     <li>Item 1 Sub Item 3</li>
                     </ul>
