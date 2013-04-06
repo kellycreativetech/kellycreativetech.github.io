@@ -41,7 +41,7 @@ auto: false
 server: false
 
 baseurl:
-url: http://jhaurawachsman.com
+url: http://jw.localhost
 
 # lsi: true
 markdown: redcarpet
