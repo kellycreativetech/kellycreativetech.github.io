@@ -6,10 +6,6 @@ constants:
   locale:    en_US
   encoding:  utf-8
 
-  # Put blog in own directory? Leave both blank if no.
-  blog_dir:  blog
-  blog_url:
-
   # Name (Brand), Tagline and Meta Image (Og)
   name:      Jhaura Wachsman
   tagline:   Web Developer
