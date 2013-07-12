@@ -8,39 +8,39 @@ constants:
   encoding: utf-8
 
   # Name (Brand), Tagline and Meta Image (Og)
-  name: Jhaura Wachsman
-  tagline: Web Developer
+  name: Kasey Kelly
+  tagline: Web Designer
   description: |
-    Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
+    Kelly Creative Tech Testbed
 
   # Contact and Domain
-  email: jw@jhaurawachsman.com
-  domain: jhaurawachsman.com
+  email: kasey@kellycreativetech.com
+  domain: kellycreativetech.com
 
   # Social Media User Names (Not full URL)
-  github: jhauraw
-  twitter: JhauraWachsman
-  facebook: JhauraWachsman
-  gplus: 103492502746159725544
-  pinterest: jhaurawachsman
-  linkedin: jhaurawachsman
+  github: kkellydesign
+  twitter: kaseykelly
+  #facebook: JhauraWachsman
+  #gplus: 103492502746159725544
+  #pinterest: jhaurawachsman
+  linkedin: kaseykelly
 
   # Feedburner Feed Name
-  feed-name: jhaurawachsman
+  #feed-name: jhaurawachsman
 
   # Meta Admin / Verify IDs
-  facebook-admin: 1550453047
-  facebook-appid: 251689391563684
-  gplus-publisher: 103492502746159725544
-  disqus-user:
+  #facebook-admin: 1550453047
+  #facebook-appid: 251689391563684
+  #gplus-publisher: 103492502746159725544
+  #disqus-user:
 
   # Analytics / Metrics
-  google-analytics-id: UA-17276272-1
+  #google-analytics-id: UA-17276272-1
 
   # Default author for Posts
   author:
-    name: Jhaura Wachsman
-    domain: jhaurawachsman.com
+    name: Kasey Kelly
+    domain: kellycreativetech.com
 
 # Jekyll Config ====================================================== #
 
