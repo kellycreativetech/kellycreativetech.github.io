@@ -1,91 +1,99 @@
-Jekyll + ZURB Foundation Quickstart
-===================================
+# Jekyll + Foundation CSS #
 
-A template project to quickly start a new project based on ZURB Foundation
-and the Jekyll static site generator.
+I love Zurb's Foundation framework, and Jekyll is a great tool for preventing code duplication while building static HTML/CSS/js websites.
 
-Unlike other projects (such as Octopress), this is a minimal skeleton
-repository upon which you can build your project. You _have_ to understand
-all the moving parts and how they are configured.
+This tool really just exists to create a "base" directory for starting new projects.
 
-
-
-
-What's Inside
-=============
-
-## Technologies
-
-* SASS
-* Compass;
-* ZURB Foundation;
-* Foreman;
-
-## Goodies
-
-* Default page templates, suitable for a blog;
-* Sensible Jekyll defaults;
-* Site-wide Atom feed for all blog posts;
-* Uses Foreman to orchestrate `compass watch` and Jekyll development server;
+## What's Included: ##
+* all the directories that Jekyll needs to compile your static site
+* jQuery
+* a stripped-down version of the foundation framework -- just the grid and orbit slideshow.
+* a default html5 template in _layouts
+* a default nav bar under _includes
+* orbit slideshow js code in _includes, ready to be called on any page
+* default index and 404 page, along with 3 other empty pages
 
 
+## How To 'Install' It ##
 
+First, make sure you have Ruby and the Jekyll gem installed (gem install jekyll).
 
-Getting Started
-===============
+Then, just download the .zip or
 
-Clone this repository and perform the automated setup procedure:
+	```git clone git://github.com/groovemonkey/jekyll-foundation-base.git```
 
-    git clone git://github.com/lvillani/quickstart-jekyll-zurb.git my-site
-    cd my-site
-    make setup
+this baby and get started! Because now other people are using this now, I wrote a small tutorial (below).
 
-At this point you can start the development server by running:
+I hope you find this useful; it has certainly made me more productive.
 
-    make runserver
+Cheers!
 
 
 
+## Tutorial: ##
 
-Directory & File Layout
-=======================
 
-    .
-    ├── asset/         -- Static assets (e.g.: images)
-    ├── _layouts/      -- Jekyll Layouts
-    ├── _posts/        -- Blog posts
-    ├── _sass/         -- SASS/SCSS (processed by Compass)
-    ├── _site/         -- Output directory for generated content
-    ├── _config.yml    -- Jekyll Configuration file
-    ├── compass.rb     -- Compass configuration file
-    ├── Gemfile        -- Ruby Bundler configuration file
-    ├── Makefile       -- Top level Makefile
-    ├── Procfile       -- Foreman configuration file
-    └── robots.txt     -- Directives for web crawlers
+### Layouts ###
+
+The easiest way is to use the default layout (HTML5 Boilerplate -- _layouts/default.html). To use a layout, put this at the top of your page:
+
+    ---
+    layout: default
+    title: YourPageTitleHere
+    ---
+
+<h1>Page-Specific HTML Content</h1>
+<p>etc...</p>
 
 
 
+### Includes ###
 
-License
-=======
+If you're planning on reusing a few snippets of code on several pages, DRY (Don't Repeat Yourself)! Create an include HTML file and put it in the _includes/ directory. Kind of like a Rails helper.
 
-This is free and unencumbered software released into the public domain.
+To call an include in a page, just write
 
-Anyone is free to copy, modify, publish, use, compile, sell, or distribute
-this software, either in source code form or as a compiled binary, for any
-purpose, commercial or non-commercial, and by any means.
+    {% include yourincludename.html %}
 
-In jurisdictions that recognize copyright laws, the author or authors of this
-software dedicate any and all copyright interest in the software to the public
-domain. We make this dedication for the benefit of the public at large and to
-the detriment of our heirs and successors. We intend this dedication to be an
-overt act of relinquishment in perpetuity of all present and future rights to
-this software under copyright law.
 
-Unless you really want to, do not even mention that the copied content
-originates from this skeleton library. Its sole purpose is to be copied into
-other projects.
+For an example of this, see _layouts/default.html -- I include the nav.html snippet on the default layout, meaning it displays on every page that uses that layout.
 
-The above statements apply to all content in this skeleton library, even when
-the COPYING files, or the headers in the files state otherwise, they are just
-common examples.
+
+### Slideshows ###
+
+Foundation's Orbit code is ready to plug into your website; the javascript to trigger it can be found in _includes/orbit.html -- just include that on the page where you want a slideshow, and then add a div#slideshow with image tags inside:
+
+    <div id="slideshow">
+    	<img src="something.jpg" alt="blah">
+    	<img src="somethingelse.jpg" alt="yeah">
+    	<img src="foo.jpg" alt="bar">
+    </div>
+
+That's it.
+
+
+## Known Issues ##
+
+I haven't thought of a clever way to get jekyll or moustache to automatically apply page-specific HTML IDs to elements, e.g.
+
+"""
+menu.each do |menu_item| 
+	if menu_item.src == current_page_url
+		menu_item.id = "active"
+	end
+end
+"""
+
+I recommend doing this in a Javascript include that you place in the default template, but that will degrade the experience for people who don't let JS execute in their browsers (although those people will probably be used to a degraded web browsing experience...).
+
+
+
+
+## That's It! ##
+
+Have Fun and make some cool websites.
+
+Comments, improvements, and suitcases filled with money can be sent to dave@dave-o-matic.com
+
+
+-Dave

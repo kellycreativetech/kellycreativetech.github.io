@@ -1,14 +1,7 @@
-tmp
-node_modules
-*.sass-cache
+# Ignore Aptana Project File #
+.project
 
-# OS, Editors
-*.DS_Store
-Thumbs.db
-Icon?
-.cache
-*.sublime-*
+# Ignore Compiled Site #
+_site/*
 
-# Jekyll Static
-_site
-_drafts
+
