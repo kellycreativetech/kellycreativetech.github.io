@@ -1,37 +1,18 @@
 ---
 layout: default
-title: Welcome!
+section: blog
 ---
 
-<h1>this is the default index page!</h1>
+<div class='listing col6 pad4h margin3'>
+  {% for item in site.categories.blog limit:1000 %}
+    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
 
-<!-- breaks, because we don't have any CSS yet -->
-<br>
-
-<p>To get started, see the readme.md file. View the source for this page to see how to split up the grid and position elements, or view <a href="http://foundation.zurb.com/docs/grid.php">the foundation documents</a></p>.
-
-<!-- more ugly breaks -->
-<br>
-<br>
-
-<!-- a new row in our 12-column grid -->
-<div class="row"> 
-
-<!-- one third -->
-<div class="four columns">
-	<p>Some Stuff</p>
+    {% if date != ndate %}
+      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
+    {% endif %}
+    <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} <span class='date'>&#126; {{item.date | date:"%b %d"}}</span></a>
+  {% endfor %}
 </div>
 
-<!-- one third -->
-<div class="four columns">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat obcaecati eaque soluta rerum tempora molestias neque asperiores sit nulla error accusantium eveniet quia omnis impedit enim aspernatur sint ad earum.</p>
-</div>
-
-<!-- one third -->
-<div class="four columns">
-	<p>Even More Important Stuff</p>
-</div>
-
-
-<!-- end row -->
-</div>
+{% include rss-link.html %}

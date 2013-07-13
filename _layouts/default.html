@@ -1,61 +1,30 @@
+---
+title: 'This is my Site Title'
+---
 <!DOCTYPE html>
-
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-
-  <title>{{ page.title }}</title>
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="assets/css/foundation.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-
-  
-<!-- JS Files -->
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/foundation.js"></script>
-  	<!-- Initialize JS Plugins -->
-  	<script src="assets/js/app.js"></script>
-
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  
-
+  <title>Site Title {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
+  <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
 </head>
-	<body>
-		
-<!-- Whole Body Div -->
-<div class="row">
-<div class="twelve columns centered">
-
-
-{% include nav.html %}
-
-<!-- Main page content -->
-<div id="wrapper">
-
-
-	{{ content }}	
-
-
-<!-- end wrapper -->	
-</div>
-
-
-
-  <!-- End Whole-Body Div -->
+<body>
+  <div class='container'>
+    <div class='col12 clearfix'>
+      <div class='header col6 margin3 pad4h'>
+        <div class='clearfix col12'>
+          <div class='menu fr'>
+            <a class='{% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'>Blog</a>
+            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About</a>
+            <a href='//github.com/prose/starter'>Fork on GitHub</a>
+          </div>
+          <h1 class='title'><a href='{{site.baseurl}}/'>{{page.title}}</a></h1>
+        </div>
+      </div>
+    </div>
+    {{content}}
   </div>
-</div>
+  <script src='{{site.baseurl}}/site.js'></script>
 </body>
-</html>
-
-
