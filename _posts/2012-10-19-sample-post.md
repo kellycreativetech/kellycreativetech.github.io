@@ -1,7 +1,12 @@
 ---
-layout: default
+layout: blog
+category: blog
+published: true
 title: Sample Post
 ---
+
+
+![apple](/assets/media/apple.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra
 mollis fringilla. Mauris sapien urna, cursus luctus consequat at, varius ut
